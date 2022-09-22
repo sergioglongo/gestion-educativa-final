@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    opacity: 0.5;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 280px 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    ".   .   ."
+    ". login ."
+    ".   .   .";
+    max-height: 600px;
+}
+
+.login {
+    grid-area: login;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;  
+}
+
+.contenedor .login {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "message"
+    "email"
+    "password"
+    "send"
+    "google"
+    "reset";
+}
+
+.message {
+    grid-area: message;
+    text-align: center;
+    margin: 15px;
+}
+
+.email {
+    grid-area: email;
+}
+
+.password {
+    grid-area: password;
+}
+
+
+.send {
+    grid-area: send;
+}
+
+.google {
+    grid-area: google;
+}
+
+.reset {
+    grid-area: reset;
+}
+
+.email,
+.password,
+.send,
+.google,
+.reset {
+    justify-self: center;
+    align-self: center;
+}

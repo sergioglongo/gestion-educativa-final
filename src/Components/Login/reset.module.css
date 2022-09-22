@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.contenedor {
+    display: grid;
+    /* margin: 20px; */
+    grid-template-columns: 1fr 250px 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". . ."
+    ". reset ."
+    ". . .";
+    min-height: 600px;
+    max-height: 600px;
+}
+
+.reset {
+    grid-area: reset;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;  
+}
+
+.contenedor .reset {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "message"
+    "email"
+    "send";
+    /* gap: 15px; */
+}
+
+.message {
+    grid-area: message;
+    text-align: center;
+}
+
+.email {
+    grid-area: email;
+}
+
+
+.send {
+    grid-area: send;
+}
+
+.message,
+.email,
+.send {
+    justify-self: center;
+    align-self: center;
+}
+
+

@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50px, 1fr, 1fr, 50px;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        ". form form ."
+        /* max-height: 600px; */
+}
+
+.form {
+    grid-area: form;
+
+}
+
+.container .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+        "card pay";
+    gap: 10px;
+
+}
+
+
+.card {
+    grid-area: card;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(8, 88, 172);
+    border-radius: 10px;
+
+}
+
+.form .card {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "students students"
+        "createDate createDate"
+        "subject subject"
+        "amount delete";
+    gap: 10px;
+    
+}
+
+
+
+.students {
+    grid-area: students;
+}
+
+.createDate {
+    grid-area: createDate;
+}
+
+.subject {
+    grid-area: subject;
+}
+
+.amount {
+    grid-area: amount;
+}
+
+.delete {
+    grid-area: delete;
+}
+
+
+.students, 
+.createDate, 
+.subject, 
+.amount, 
+.delete {
+    text-align: start;
+    justify-self: start;
+    align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pay {
+    grid-area: pay;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(8, 88, 172);
+    border-radius: 10px;
+
+}
+
+.amount {
+    grid-area: amount;
+}
+
+.expirationDate {
+    grid-area: expirationDate;
+}
+
+.detail {
+    grid-area: detail;
+}
+
+.send {
+    grid-area: send;
+}
+
+.students,
+.subject,
+.amount,
+.expirationDate,
+.detail {
+    justify-self: center;
+    align-self: center;
+}

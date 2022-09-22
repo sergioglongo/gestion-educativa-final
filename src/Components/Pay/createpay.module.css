@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    ".   .   ."
+    ". form ."
+    ".   .   .";
+    max-height: 600px;
+}
+
+.form {
+    grid-area: form;
+   
+}
+
+.container .form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "students"
+    "subject"
+    "amount"
+    "expirationDate"
+    "detail"
+    "send";
+    gap: 10px;
+    
+}
+
+
+.students {
+    grid-area: students;
+
+}
+
+.subject {
+    grid-area: subject;
+}
+
+.amount {
+    grid-area: amount;
+}
+
+.expirationDate {
+    grid-area: expirationDate;
+}
+
+.detail {
+    grid-area: detail;
+}
+
+.send {
+    grid-area: send;
+}
+
+.students, 
+.subject, 
+.amount,
+.expirationDate,
+.detail {
+    justify-self: center;
+    align-self: center;
+}

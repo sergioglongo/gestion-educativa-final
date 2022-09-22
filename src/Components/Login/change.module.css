@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 280px 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: ". . ."
+    ". change ."
+    ". . .";
+    min-height: 600px;
+    max-height: 600px;
+}
+
+.change {
+    grid-area: change;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;  
+}
+
+.contenedor .change {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "message"
+    "password"
+    "newPassword"
+    "send";
+}
+
+.message {
+    grid-area: message;
+    text-align: center;
+    margin: 15px;
+}
+
+.password {
+    grid-area: password;
+}
+
+.newPassword {
+    grid-area: newPassword;
+}
+
+
+.send {
+    grid-area: send;
+}
+
+.message,
+.password,
+.newPassword,
+.send {
+    justify-self: center;
+    align-self: center;
+}
+
+
